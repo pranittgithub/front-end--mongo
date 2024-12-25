@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <p id="message"></p>
+    </form>
+    
+    <script>
+        // Check if the user is already logged in on page load
+        window.onload = () => {
+            const storedEmail = localStorage.getItem('userEmail');
+            if (storedEmail) {
+                // Redirect to label_code.html if email exists in localStorage
+                window.location.href = 'label_code.html';
+            }
+        };
+
+        // Handle form submission
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+        
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const message = document.getElementById('message');
+        
+            const response = await fetch('http://localhost:8000/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password }),
+            });
+        
+            const result = await response.json();
+            message.textContent = result.message;
+        
+            if (response.ok && result.message.includes('Redirecting')) {
+                // Store the email in localStorage on successful login
+                localStorage.setItem('userEmail', email);
+
+                // Redirect to labelcode.html
+                window.location.href = 'label_code.html';
+            }
+        });
+
+        // Remove email from localStorage once the page is refreshed
+        // window.addEventListener('beforeunload', () => {
+        //     localStorage.removeItem('userEmail');
+        // });
+    </script>
+</body>
+</html>
