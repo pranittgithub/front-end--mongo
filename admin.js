@@ -6,7 +6,7 @@ document.getElementById('adminLoginForm').addEventListener('submit', async (e) =
   const password = document.getElementById('password').value.trim();
   const adminMessage = document.getElementById('adminMessage');
 
-  const response = await fetch('https://backend-mongo-pehs.onrender.com//admin', {
+  const response = await fetch('https://backend-mongo-pehs.onrender.com/admin', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
