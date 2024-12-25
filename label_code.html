@@ -43,7 +43,7 @@
                 return;
             }
     
-            const response = await fetch('http://localhost:8000/validate-code', {
+            const response = await fetch('https://mongo-polj.onrender.com/validate-code', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId: userEmail, labelCode }), // Send email as userId

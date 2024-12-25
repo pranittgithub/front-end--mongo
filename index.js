@@ -20,7 +20,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
 
   try {
       // Backend Request
-      const response = await fetch('http://localhost:8000/register', {
+      const response = await fetch('https://mongo-polj.onrender.com/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name, phone, email, password }),
