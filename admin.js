@@ -6,7 +6,7 @@ document.getElementById('adminLoginForm').addEventListener('submit', async (e) =
   const password = document.getElementById('password').value.trim();
   const adminMessage = document.getElementById('adminMessage');
 
-  const response = await fetch('https://mongo-polj.onrender.com/admin', {
+  const response = await fetch('https://backend-mongo-pehs.onrender.com//admin', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
@@ -80,7 +80,7 @@ document.getElementById('adminLoginForm').addEventListener('submit', async (e) =
 async function deleteUser(userId) {
   if (confirm('Are you sure you want to delete this user?')) {
     try {
-      const response = await fetch(`https://mongo-polj.onrender.com/admin/delete-user/${userId}`, {
+      const response = await fetch(`https://backend-mongo-pehs.onrender.com/admin/delete-user/${userId}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
       });
