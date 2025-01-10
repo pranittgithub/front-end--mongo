@@ -1,0 +1,159 @@
+h1{
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+}
+#registerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#adminLoginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#adminLoginForm input{
+    padding: 10px;
+    height: 30px;
+    width: 300px;
+    font-size: 3vh;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    border: 1.5px solid black;
+}
+#adminLoginForm button{
+    font-size: 3vh;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+}
+#registerForm input{
+    padding: 10px;
+    height: 30px;
+    width: 300px;
+    font-size: 3vh;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    border: 1.5px solid black;
+}
+#registerForm button{
+    font-size: 3vh;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+}
+#registerForm p{
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bold;
+}
+#userList h2{
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+#userList table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#userList th, td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+#userList th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#userList td {
+    background-color: #f9f9f9;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+#userList tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+#userList tr:hover td {
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+
+#userList caption {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+#adminMessage{
+    font-size: 5vh;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4.5vh;
+    }
+
+    #registerForm input, #adminLoginForm input {
+        width: 90%;
+        padding: 20px;
+        font-size: 4vh;
+    }
+
+    #registerForm button, #adminLoginForm button {
+        width: 50%;
+        height: 60px;
+        font-size: 3.5vh;
+    }
+
+    #registerForm p, #adminLoginForm p {
+        font-size: 4vh;
+    }
+
+    #userList h2 {
+        font-size: 3vh;
+    }
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    caption {
+        font-size: 20px;
+    }
+    #adminMessage{
+        font-size: 3vh;
+    }
+}

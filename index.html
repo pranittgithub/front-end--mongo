@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>User Registration</h1>
+  <form id="registerForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="pass" placeholder="Password" required>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="" disabled selected>Select your gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    
+    <label for="purchase">Purchase From:</label>
+    <select id="purchase" name="purchase" required>
+      <option value="" disabled selected>Select purchase source</option>
+      <option value="local-retail-store">Local Retail Store</option>
+      <option value="supermarket">Super Market</option>
+      <option value="gift">Gift</option>
+    </select>
+    
+    <button type="submit">Register</button>
+    <p id="message"></p>
+  </form>
+  <script src="index.js"></script>
+</body>
+</html>
